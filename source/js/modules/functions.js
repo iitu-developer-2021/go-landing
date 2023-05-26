@@ -1,3 +1,5 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+
 export function isWebp() {
     function testWebP(callback) {
         // eslint-disable-next-line
@@ -19,3 +21,19 @@ export function isWebp() {
         window.document.documentElement.classList.add(className);
     });
 }
+
+export const initSwiper = () => {
+    const swiper = new Swiper('', {
+        // Name of slider class
+        modules: [Navigation, Pagination],
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoHeight: true,
+        navigation: {
+            nextEl: '', // Arrow right .class
+            prevEl: '' // Arrow left .class
+        }
+    });
+};
