@@ -3,25 +3,43 @@
 @import "base/mixins";
 @import "fonts";
 
-$fontFamily: "OpenSans";
-$fontSize: rem(14);
+$fontFamily: "Blogger Sans";
+$fontSize: rem(22);
 
 
 //Цвета
 $mainColor: #000;
+$mainLightDarkColor: #192144;
+
+$mainLightColor: #FFFFFF;
+$mainYellowColor: #FFD74B;
+$mainYellowDarken: #FFBD30;
+$mainOrange: #FF8D30;
+$mainOrangeHover: #F26926;
+
+$mainDarkColor: #161C35;
+$mainDarkBackground: #121936;
+$mainLightGrayBackground: #CCCCCC;
 
 $minWidth: 320;
 $maxWidth: 1920;
-$maxWidthContainer: 1570;
-$containerPadding: 30;
-$containerWidth: $maxWidthContainer + $containerPadding;
+$maxWidthContainer: 1320;
 
-$pc: em($containerWidth);
+$containerPaddingDesktop: 60;
+$containerPaddingTablet: 40;
+$containerPaddingMobile: 24;
+
+$containerWidth:  $maxWidthContainer + $containerPaddingDesktop;
+$containerWidthDesktop: $maxWidthContainer + $containerPaddingDesktop;
+$containerWidthTablet: $maxWidthContainer + $containerPaddingTablet;
+$containerWidthMobile: $maxWidthContainer + $containerPaddingMobile;
+
+$pc: em($containerWidthDesktop);
 $tablet: em(991.98);
 $mobile: em(767.98);
 $mobileSmall: em(479.98);
 
 @import "base/null";
-
+@import "base/common";
 @import "modules/header";
 @import "modules/footer";

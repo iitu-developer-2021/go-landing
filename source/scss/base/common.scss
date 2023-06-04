@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+.container{
+  max-width: rem($containerWidthDesktop);
+  padding: rem(0) rem($containerPaddingDesktop);
+  margin: 0 auto;
+
+  @media (max-width: $mobile) {
+    max-width: rem($containerWidthTablet);
+    padding: rem(0) rem($containerPaddingTablet);
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: rem($containerWidthMobile);
+    padding: rem(0) rem($containerPaddingMobile);
+  }
+}
+
+.visually-hidden{
+  display: none;
+}
+
+.circle {
+  border-radius: 50%;
+  width: rem(50);
+  height: rem(50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background: $mainYellowColor;
+  border-radius: rem(25);
+  padding: rem(16) rem(28);
+  font-weight: 700;
+  font-size: rem(20);
+  line-height: math.div(20, 20);
+  text-transform: uppercase;
+  color: $mainDarkColor;
+  transition: .3s all ease 0s;
+
+  &:hover{
+    background: $mainYellowDarken;
+  }
+
+  &__active,
+  &:active{
+    color: rgba($mainDarkColor, 0.3);
+  }
+}
